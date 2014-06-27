@@ -6,6 +6,16 @@ public class Trainer {
         Dog indy = new Dog("Indy", "golden", "yellow", 65, 1);
         Dog riley = new Dog("Riley", "golden", "red", 75, 9);
         Dog sunny = new Dog("Sunny", "lab", "yellow", 80, 9);
+        Dog jackie = new Dog();
+        jackie.name = "Jackie";
+        jackie.age = 5;
+        jackie.setBreed("Border Collie");
+        jackie.setColor("white");
+
+
+
+
+
 
         // have Indy bark 5 times
         indy.bark(5);
@@ -19,6 +29,7 @@ public class Trainer {
         pack.add(indy);
         pack.add(riley);
         pack.add(sunny);
+        pack.add(jackie);
         // make the loop to have the whole pack bark
         for (Dog yapper: pack) {
             yapper.bark(2);

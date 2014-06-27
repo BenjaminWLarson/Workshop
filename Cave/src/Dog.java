@@ -27,6 +27,8 @@ public class Dog {
         this.weight = weight;
         this.age = age;
     }
+    // make a dog without giving any info
+    public Dog () {}
     public String getName() {
         return name;
     }
