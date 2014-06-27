@@ -7,8 +7,12 @@ public class Trainer {
         Dog riley = new Dog("Riley", "golden", "red", 75, 9);
         Dog sunny = new Dog("Sunny", "lab", "yellow", 80, 9);
         Dog jackie = new Dog();
-        jackie.name = "Jackie";
-        jackie.age = 5;
+
+        // these no longer work because I changed the instance variables to private instead of default to setter methods are required to access them
+//        jackie.name = "Jackie";
+//        jackie.age = 5;
+        jackie.setName("Jackie");
+        jackie.setAge(5);
         jackie.setBreed("Border Collie");
         jackie.setColor("white");
 
@@ -51,7 +55,9 @@ public class Trainer {
         System.out.println("\nWhat dogs are in our pack?");
         System.out.println("We have " + pack.size() + " dogs in our pack:");
         for (int i = 0; i < pack.size(); i++) {
-            System.out.println("Dog " + (i+1) + " is named " + pack.get(i).name + " and is a " + pack.get(i).color + " " + pack.get(i).breed);
+            // I also had to make the changes here, so pack to access the pack of dogs in the List, then .get gets the dog with desired index
+            // then .getName, .getColor and .getBreed
+            System.out.println("Dog " + (i+1) + " is named " + pack.get(i).getName() + " and is a " + pack.get(i).getColor() + " " + pack.get(i).getBreed());
         }
     }
 }

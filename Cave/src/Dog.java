@@ -6,11 +6,11 @@
 
 public class Dog {
 
-    String name;
-    String breed;
-    String color;
-    int weight;
-    int age;
+    private String name;
+    private String breed;
+    private String color;
+    private int weight;
+    private int age;
 
     /**
      *
