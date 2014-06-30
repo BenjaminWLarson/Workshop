@@ -9,8 +9,11 @@ public class Fly {
 
         System.out.println("\nNow we start a for loop");
 
+
+
         LoopPrint(3);
 
+        System.out.println("number is: " + gimmeNumber());
 
         // enhanced for loop here
         // change
@@ -31,6 +34,11 @@ public class Fly {
             Wicked();
             PrintAwesome();
         }
+    }
+    public static int gimmeNumber () {
+        int x = 4;
+
+        return x;
     }
 
 
