@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  * * Note: I just realized the refrain changes on this song, so it's not going to quite accurate until I make allowances for that
  */
 public class CatsInTheCradleLyricsWithSwing {
-    public static void swingTest () {
+    public static void singEntireSong () {
         // making a new frame with title of song
         JFrame frame = new JFrame("\"Cats in the Cradle Song\"");
         // making a panel to hold each verse panel
@@ -25,7 +25,7 @@ public class CatsInTheCradleLyricsWithSwing {
         // forcing the panels to stack vertically
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-        singEntireSong(mainPanel);
+        printAllTheVerses(mainPanel);
 
         // add main panel to frame and a few things to make things nicer
         frame.add(mainPanel);
@@ -43,10 +43,10 @@ public class CatsInTheCradleLyricsWithSwing {
     }
 
 
-    public static JPanel singEntireSong (JPanel jPanel) {
+    public static JPanel printAllTheVerses(JPanel jPanel) {
         for (int i = 1; i < 9; i++) {
             if (i % 2 == 0) {
-                jPanel.add(makeSingRefrainPanel());
+                jPanel.add(makeSingRefrainPanel(i));
             } else {
                 switch (i) {
                     case 1:
@@ -68,17 +68,35 @@ public class CatsInTheCradleLyricsWithSwing {
     }
 
 
-     public static JPanel makeSingRefrainPanel () {
+     public static JPanel makeSingRefrainPanel (int Iteration) {
         JPanel versePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JLabel verseLabel = new JLabel("<html><body> And the cat's in the cradle and the silver spoon<br>" +
                 "Little boy blue and the man on the moon<br>" +
-                "When you comin' home, Dad<br>" +
-                "I don't know when, but we'll get together then<br>" +
-                "You know we'll have a good time then<br>" +
+                giveRefrainLinesThreeAndFour(Iteration) +
+                giveRefrainLinesFive(Iteration) +
                 "<br>");
         versePanel.add(verseLabel);
         verseLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         return versePanel;
+    }
+    public static String giveRefrainLinesThreeAndFour (int Iteration) {
+        String lines3and4;
+        if (Iteration < 5) {
+            lines3and4 = "When you comin' home, Dad<br>I don't know when, but we'll get together then<br>";
+        }
+        else
+            lines3and4 = "When you comin' home son<br>I don't know when, but we'll get together then, Dad<br>";
+        return lines3and4;
+    }
+    public static String giveRefrainLinesFive (int Iteration) {
+        String line5;
+        if (Iteration != 8) {
+            line5 = "You know we'll have a good time then";
+        }
+        else {
+            line5 = "We're gonna have a good time then";
+        }
+        return line5;
     }
     public static JPanel makeSingVerseChildArrivePanel () {
         JPanel versePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));

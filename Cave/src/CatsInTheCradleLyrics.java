@@ -3,13 +3,12 @@
  * Class to print out lyrics of song matching the version here:
  * http://www.azlyrics.com/lyrics/harrychapin/catsinthecradle.html
  *
- * Note: I just realized the refrain changes on this song, so it's not going to quite accurate until I make allowances for that
  */
 public class CatsInTheCradleLyrics {
     public static void singEntireSong () {
         for (int i = 1; i < 9; i++) {
             if (i % 2 == 0) {
-                singRefrain();
+                singRefrain(i);
             } else {
                 switch (i) {
                     case 1:
@@ -28,13 +27,47 @@ public class CatsInTheCradleLyrics {
             }
         }
     }
-    public static void singRefrain () {
+    public static void singRefrain (int Iteration) {
         System.out.println("And the cat's in the cradle and the silver spoon");
-        System.out.println("Little boy blue and the man on the moon");
-        System.out.println("When you comin' home, Dad");
-        System.out.println("I don't know when, but we'll get together then");
-        System.out.println("You know we'll have a good time then");
+        System.out.println("Little boy blue and the man in the moon");
+//        System.out.println(giveRefrainLinesThreeAndFour(Iteration));
+//        System.out.println(giveRefrainLinesFive(Iteration));
+//
+        if (Iteration < 5) {
+            System.out.println("When you comin' home, Dad");
+            System.out.println("I don't know when, but we'll get together then");
+        }
+        else {
+            System.out.println("When you comin' home son");
+            System.out.println("I don't know when, but we'll get together then, Dad");
+        }
+
+        if (Iteration != 8) {
+            System.out.println("You know we'll have a good time then");
+        }
+        else {
+            System.out.println("We're gonna have a good time then");
+        }
         System.out.println("");
+    }
+    public static String giveRefrainLinesThreeAndFour (int Iteration) {
+        String lines3and4;
+        if (Iteration < 5) {
+            lines3and4 = "When you comin' home, Dad\nI don't know when, but we'll get together then";
+        }
+        else
+            lines3and4 = "When you comin' home son\nI don't know when, but we'll get together then, Dad";
+        return lines3and4;
+    }
+    public static String giveRefrainLinesFive (int Iteration) {
+        String line5;
+        if (Iteration != 8) {
+            line5 = "You know we'll have a good time then";
+        }
+        else {
+            line5 = "We're gonna have a good time then";
+        }
+        return line5;
     }
     public static void singVerseChildArrive () {
         System.out.println("\"Cat's In The Cradle\"");

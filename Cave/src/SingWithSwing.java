@@ -5,8 +5,7 @@
  */
 public class SingWithSwing {
     public static void main (String [] args) {
-//        CatsInTheCradleLyricsWithSwing.singEntireSong();
-        CatsInTheCradleLyricsWithSwing.swingTest();
+        CatsInTheCradleLyricsWithSwing.singEntireSong();
 
     }
 }
