@@ -76,5 +76,15 @@ public class Dog {
             System.out.println(name + " says Woof!");
         }
     }
+    public String howOld() {
+        String ageIs = "";
+        if (this.age == 1) {
+            ageIs = this.name + " is 1 year old";
+        }
+        else {
+            ageIs = this.name + " is " + this.age + " years old";
+        }
+        return ageIs;
+    }
 
 }

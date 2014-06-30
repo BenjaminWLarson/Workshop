@@ -45,13 +45,9 @@ public class Trainer {
 
         System.out.println("\nHow old are all these dogs?");
         for (Dog pupster: pack) {
-            if (pupster.getAge() == 1) {
-                System.out.println(pupster.getName() + " is " + pupster.getAge() + " year old");
-            }
-            else {
-                System.out.println(pupster.getName() + " is " + pupster.getAge() + " years old");
-            }
+            System.out.println(pupster.howOld());
         }
+
         System.out.println("\nWhat dogs are in our pack?");
         System.out.println("We have " + pack.size() + " dogs in our pack:");
         for (int i = 0; i < pack.size(); i++) {
