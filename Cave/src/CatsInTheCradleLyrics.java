@@ -2,25 +2,27 @@
 /**
  * Class to print out lyrics of song matching the version here:
  * http://www.azlyrics.com/lyrics/harrychapin/catsinthecradle.html
+ *
+ * Note: I just realized the refrain changes on this song, so it's not going to quite accurate until I make allowances for that
  */
 public class CatsInTheCradleLyrics {
     public static void singEntireSong () {
         for (int i = 1; i < 9; i++) {
             if (i % 2 == 0) {
-                CatsInTheCradleLyrics.singRefrain();
+                singRefrain();
             } else {
                 switch (i) {
                     case 1:
-                        CatsInTheCradleLyrics.singVerseChildArrive();
+                        singVerseChildArrive();
                         break;
                     case 3:
-                        CatsInTheCradleLyrics.singVerseTurned10();
+                        singVerseTurned10();
                         break;
                     case 5:
-                        CatsInTheCradleLyrics.singVerseCollege();
+                        singVerseCollege();
                         break;
                     case 7:
-                        CatsInTheCradleLyrics.singVerseRetired();
+                        singVerseRetired();
                         break;
                 }
             }
