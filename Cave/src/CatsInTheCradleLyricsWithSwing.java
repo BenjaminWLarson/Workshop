@@ -34,6 +34,7 @@ public class CatsInTheCradleLyricsWithSwing {
         // add main panel to frame and a few things to make things nicer
         frame.add(mainPanel);
         JScrollPane jsp = new JScrollPane(mainPanel);
+        jsp.getVerticalScrollBar().setUnitIncrement(16);
         frame.add(jsp);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -41,7 +42,7 @@ public class CatsInTheCradleLyricsWithSwing {
         frame.setFocusableWindowState(true);
 
         // set frame size so window doesn't start minimized
-        frame.setSize(330, 1100);
+        frame.setSize(330, 500);
         // center frame on screen
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
