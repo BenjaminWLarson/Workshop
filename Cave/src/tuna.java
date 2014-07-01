@@ -14,5 +14,7 @@ public class tuna {
         return girlName;
     }
     public void saying () {
-        System.out.printf("Your first gf was %s", getName());    }
+//        System.out.printf("Your first gf was %s", getName());
+        System.out.print("Your first gf was " + getName());
+    }
 }
