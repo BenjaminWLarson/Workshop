@@ -7,6 +7,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  * Class to print out lyrics of song matching the version here:
@@ -22,6 +23,9 @@ public class CatsInTheCradleLyricsWithSwing {
         JFrame frame = new JFrame("\"Cats in the Cradle Song\"");
         // making a panel to hold each verse panel
         JPanel mainPanel = new JPanel();
+
+
+
         // forcing the panels to stack vertically
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
@@ -29,6 +33,9 @@ public class CatsInTheCradleLyricsWithSwing {
 
         // add main panel to frame and a few things to make things nicer
         frame.add(mainPanel);
+        JScrollPane jsp = new JScrollPane(mainPanel);
+        frame.add(jsp);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setFocusableWindowState(true);
@@ -40,6 +47,7 @@ public class CatsInTheCradleLyricsWithSwing {
         int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
         int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
         frame.setLocation(x, y);
+
     }
 
 
