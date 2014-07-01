@@ -16,10 +16,12 @@ class apples {
        Scanner input = new Scanner(System.in);
        tuna myTunaObject = new tuna();
 
-        System.out.print("Enter your name here: ");
-        String name = input.nextLine();
+       System.out.print("Enter name of first gf here: ");
+       String temp = input.nextLine();
+        myTunaObject.setName(temp);
 
-        myTunaObject.simpleMessage(name);
+        myTunaObject.saying();
+
 
 
 
