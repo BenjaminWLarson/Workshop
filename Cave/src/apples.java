@@ -4,12 +4,26 @@
 // * This file keeps changing based on the New Boston Java tutorials on YouTube
 // */
 //
+import java.util.Scanner;
 
 class apples {
-    public static void main(String args[]){
 
-    tuna tunaObject = new tuna();
-    tunaObject.simpleMessage();
+    /**
+     * @args command line arguments
+     */
+    public static void main(String[] args) {
+
+       Scanner input = new Scanner(System.in);
+       tuna myTunaObject = new tuna();
+
+        System.out.print("Enter your name here: ");
+        String name = input.nextLine();
+
+        myTunaObject.simpleMessage(name);
+
+
+
+
 
     }
 }
