@@ -15,6 +15,7 @@ public class Trainer {
         jackie.setAge(5);
         jackie.setBreed("Border Collie");
         jackie.setColor("white");
+        jackie.setWeight(35);
 
 
 
@@ -55,5 +56,16 @@ public class Trainer {
             // then .getName, .getColor and .getBreed
             System.out.println("Dog " + (i+1) + " is named " + pack.get(i).getName() + " and is a " + pack.get(i).getColor() + " " + pack.get(i).getBreed());
         }
+
+
+        System.out.println("");
+        indy.displayWeight();
+        indy.eat(5);
+        indy.displayWeight();
+        indy.poop();
+        indy.poop();
+        indy.displayWeight();
+
+
     }
 }
