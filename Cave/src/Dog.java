@@ -79,6 +79,11 @@ public class Dog {
             System.out.println(name + " says Woof!");
         }
     }
+    public String allAboutThisdog () {
+        String info = this.getName() + " is a " + this.getColor() + " " + this.getBreed() + " who is " + this.getAge() +
+                " and weights " + this.getWeight() + " lbs";
+        return info;
+    }
 
     public String howOld() {
         String ageIs = "";

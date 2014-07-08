@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 
 public class Trainer {
-    public static void main (String [] args) {
+
+    public static void main(String[] args) {
 
         Dog indy = new Dog("Indy", "golden", "yellow", 65, 1);
         Dog riley = new Dog("Riley", "golden", "red", 75, 9);
         Dog sunny = new Dog("Sunny", "lab", "yellow", 80, 9);
         Dog jackie = new Dog();
+        Dog sunnybunny = sunny;
+        Dog rdog = riley;
+        Dog current;
 
         // these no longer work because I changed the instance variables to private instead of default to setter methods are required to access them
 //        jackie.name = "Jackie";
@@ -16,10 +20,6 @@ public class Trainer {
         jackie.setBreed("Border Collie");
         jackie.setColor("white");
         jackie.setWeight(35);
-
-
-
-
 
 
         // have Indy bark 5 times
@@ -36,16 +36,16 @@ public class Trainer {
         pack.add(sunny);
         pack.add(jackie);
         // make the loop to have the whole pack bark
-        for (Dog yapper: pack) {
+        for (Dog yapper : pack) {
             yapper.bark(2);
         }
         // loop to make the whole pack sit
-        for (Dog puppy: pack) {
+        for (Dog puppy : pack) {
             puppy.sit();
         }
 
         System.out.println("\nHow old are all these dogs?");
-        for (Dog pupster: pack) {
+        for (Dog pupster : pack) {
             System.out.println(pupster.howOld());
         }
 
@@ -54,7 +54,7 @@ public class Trainer {
         for (int i = 0; i < pack.size(); i++) {
             // I also had to make the changes here, so pack to access the pack of dogs in the List, then .get gets the dog with desired index
             // then .getName, .getColor and .getBreed
-            System.out.println("Dog " + (i+1) + " is named " + pack.get(i).getName() + " and is a " + pack.get(i).getColor() + " " + pack.get(i).getBreed());
+            System.out.println("Dog " + (i + 1) + " is named " + pack.get(i).getName() + " and is a " + pack.get(i).getColor() + " " + pack.get(i).getBreed());
         }
 
 
@@ -65,6 +65,14 @@ public class Trainer {
         indy.poop();
         indy.poop();
         indy.displayWeight();
+
+        sunnybunny.bark(3);
+        System.out.println(rdog.allAboutThisdog());
+        current = sunnybunny;
+        System.out.println(current.allAboutThisdog());
+        current = indy;
+        System.out.println(current.allAboutThisdog());
+
 
 
     }
