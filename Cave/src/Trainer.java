@@ -73,6 +73,15 @@ public class Trainer {
         current = indy;
         System.out.println(current.allAboutThisdog());
 
+        current.chaseCat();
+
+        // Border Collies won't stop chasing cats....
+        for (Dog pup: pack) {
+            if (pup.getBreed() == "Border Collie") {
+                pup.chaseCat();
+            }
+        }
+
 
 
     }

@@ -110,6 +110,9 @@ public class Dog {
             System.out.println(this.getName() + " poops");
         this.setWeight(this.getWeight() - 1);
     }
+    public void chaseCat () {
+        System.out.println(this.getName() + " chases a kitty! Oh," + this.getName() + ". Why do you need to chase the poor cat?");
+    }
 
     public void displayWeight () {
         System.out.println(this.getName() + " weighs " + getWeight());
