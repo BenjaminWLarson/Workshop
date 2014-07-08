@@ -2,12 +2,15 @@ import java.util.ArrayList;
 
 public class Trainer {
 
+    Dog eater;
+    static Dog jackie;
+
     public static void main(String[] args) {
 
         Dog indy = new Dog("Indy", "golden", "yellow", 65, 1);
         Dog riley = new Dog("Riley", "golden", "red", 75, 9);
         Dog sunny = new Dog("Sunny", "lab", "yellow", 80, 9);
-        Dog jackie = new Dog();
+        jackie = new Dog();
         Dog sunnybunny = sunny;
         Dog rdog = riley;
         Dog current;
@@ -83,6 +86,11 @@ public class Trainer {
         }
 
 
+    }
+    public void weekOfEating () {
+
+    }
+    public void dayOfEating () {
 
     }
 }
