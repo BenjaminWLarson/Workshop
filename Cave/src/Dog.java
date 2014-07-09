@@ -11,6 +11,8 @@ public class Dog {
     private String color;
     private int weight;
     private int age;
+    private int registrationNumber;
+    private static int numberOfDogs = 0;
 
     /**
      * @param name name of dog as a String
@@ -25,10 +27,20 @@ public class Dog {
         this.color = color;
         this.weight = weight;
         this.age = age;
+        this.registrationNumber = ++numberOfDogs;
     }
 
+
     // make a dog without giving any info
-    public Dog() {}
+    public Dog() {
+        this.registrationNumber = ++numberOfDogs;
+    }
+    public int getRegistrationNumber () {
+        return this.registrationNumber;
+    }
+    public static int getNumberOfDogs () {
+        return numberOfDogs;
+    }
 
     public String getName() {
         return name;
@@ -81,7 +93,7 @@ public class Dog {
     }
     public String allAboutThisdog () {
         String info = this.getName() + " is a " + this.getColor() + " " + this.getBreed() + " who is " + this.getAge() +
-                " and weights " + this.getWeight() + " lbs";
+                " and weights " + this.getWeight() + " lbs. The registration number for this dog is: " + getRegistrationNumber();
         return info;
     }
 

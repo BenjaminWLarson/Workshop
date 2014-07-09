@@ -57,7 +57,8 @@ public class Trainer {
         for (int i = 0; i < pack.size(); i++) {
             // I also had to make the changes here, so pack to access the pack of dogs in the List, then .get gets the dog with desired index
             // then .getName, .getColor and .getBreed
-            System.out.println("Dog " + (i + 1) + " is named " + pack.get(i).getName() + " and is a " + pack.get(i).getColor() + " " + pack.get(i).getBreed());
+            System.out.println("Dog " + (i + 1) + " is named " + pack.get(i).getName() + " and is a " + pack.get(i).getColor() + " " + pack.get(i).getBreed() +
+                    ", registration number: " + pack.get(i).getRegistrationNumber());
         }
 
 
@@ -84,6 +85,8 @@ public class Trainer {
                 pup.chaseCat();
             }
         }
+
+        System.out.println("How many dogs do we have? We have " + Dog.getNumberOfDogs());
 
 
     }
