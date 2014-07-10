@@ -71,7 +71,9 @@ public class Dog {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        if (2 < this.weight && this.weight < 500) {
+            this.weight = weight;
+        }
     }
 
     public int getAge() {
