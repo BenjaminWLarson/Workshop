@@ -4,28 +4,34 @@
 // * This file keeps changing based on the New Boston Java tutorials on YouTube
 // */
 //
-import java.util.Scanner;
+
+import java.lang.reflect.Array;
 
 class apples {
 
-    /**
-     * @args command line arguments
-     */
     public static void main(String[] args) {
-        // make a table header
-        System.out.println("Index\tValue");
-
-        int blah[] = {32,12,18,54,2};
-
-        for (int counter= 0; counter < blah.length; counter++) {
-            System.out.println(counter + "\t" + blah[counter]);
-        }
-
-//        for (int i = 3; i < 20; i++) {
-//            System.out.println("length is " + i + " So middle is: " + (i/2 + 1));
-//        }
-
+        int blah[] = {21,16,86,21,3};
+        printArray(blah);
+        printSum(blah);
     }
+    private static void printArray (int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (i == 0) {
+                System.out.print(array[i]);
+            }
+            else {
+                System.out.print("+" + array[i]);
+            }
+        }
+    }
+    private static void printSum (int[] array) {
+        int sum = 0;
+        for (int i= 0; i < array.length; i++) {
+            sum+=array[i];
+        }
+        System.out.print("=" + sum);
+    }
+
 }
 
 
