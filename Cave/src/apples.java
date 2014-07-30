@@ -12,14 +12,19 @@ class apples {
      * @args command line arguments
      */
     public static void main(String[] args) {
-       int myLilArray[] = {1,3,2,4,7,9};
+        // make a table header
+        System.out.println("Index\tValue");
 
-        for (int i : myLilArray) {
-            System.out.println ("Number is: " + i);
+        int blah[] = {32,12,18,54,2};
+
+        for (int counter= 0; counter < blah.length; counter++) {
+            System.out.println(counter + "\t" + blah[counter]);
         }
-        for (int i = 0 ; i < myLilArray.length; i++) {
-            System.out.println ("Number is: " + myLilArray[i]);
-        }
+
+//        for (int i = 3; i < 20; i++) {
+//            System.out.println("length is " + i + " So middle is: " + (i/2 + 1));
+//        }
+
     }
 }
 

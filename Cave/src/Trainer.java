@@ -70,6 +70,10 @@ public class Trainer {
         indy.poop();
         indy.displayWeight();
 
+        System.out.println("This is the line before the breakpoint");
+        System.out.println("This is a breakpoint");
+        System.out.println("This is the line after the breakpoint");
+
         sunnybunny.bark(3);
         System.out.println(rdog.allAboutThisdog());
         current = sunnybunny;
