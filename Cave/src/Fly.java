@@ -16,6 +16,15 @@ public class Fly {
         System.out.println(atomicInteger.incrementAndGet());
         printSomething();
 
+        int blah = 0;
+        printBlah(blah);
+        blah++;
+        printBlah(blah);
+        blah = -100;
+        printBlah(blah);
+
+
+
 
 
 
@@ -31,6 +40,10 @@ public class Fly {
             System.out.println(atomicInteger.incrementAndGet());
             System.out.println("leaving the method");
         }
+
+    public static void printBlah (int blah) {
+        System.out.println(blah);
+    }
 
 
 
