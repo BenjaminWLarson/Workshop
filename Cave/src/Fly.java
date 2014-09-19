@@ -1,52 +1,43 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Fly {
 
     static AtomicInteger atomicInteger = new AtomicInteger();
+
     public static void main(String[] args) {
 
-        System.out.println("I'm sorry Dave, I can't do that. Here's a program to keep you entertained instead");
+        String tracepage;
 
+        tracepage = "ddddddddd dd ddddddddddddd ddddd dddd";
 
-        AtomicInteger lilAtomicInt = atomicInteger;
-        System.out.println(atomicInteger.incrementAndGet());
-        System.out.println(atomicInteger.incrementAndGet());
-        printSomething();
-        System.out.println(atomicInteger.incrementAndGet());
-        System.out.println(atomicInteger.incrementAndGet());
-        printSomething();
-
-        int blah = 0;
-        printBlah(blah);
-        blah++;
-        printBlah(blah);
-        blah = -100;
-        printBlah(blah);
+        String tracepageSimple = "     0      Marker                     16 x52696fdfdfdsfdsfdsadsafdsafadsf71717171 fdfdfdsfdsf";
 
 
 
+//        Parser.splitter(tracepageSimple);
+        Parser.splitter(tracepage);
 
 
-
-
-
-
-    }
-
-
-
-        public static void printSomething() {
-            System.out.println("in the method");
-            System.out.println(atomicInteger.incrementAndGet());
-            System.out.println("leaving the method");
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("the-file-name.txt", "UTF-8");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
+        writer.println("The first line");
+        writer.println("The second line");
+        writer.close();
 
-    public static void printBlah (int blah) {
-        System.out.println(blah);
+
+
+
     }
-
-
-
 
 
 }
