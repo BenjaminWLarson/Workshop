@@ -36,6 +36,10 @@ public class Parser {
         String delims = "[ ]+";
         String[] tokens = result.split(delims);
 
+
+
+
+
         String markerLabel = null;
         int markerLabelIndex = -1;
         String marker = null;
