@@ -1,3 +1,5 @@
+package net.benjaminlarson;
+
 /**
  * Created by blarson on 4/3/2015.
  */
