@@ -18,8 +18,27 @@ public class Sandbox {
 
 
 
+        for (int counter = 0; counter < 5; counter++) {
+            System.out.print("this is where we'll delete stuff in a bit....\n");
+        }
 
 
+
+//        int sum = 0;
+//        int total = 0;
+//        while (sum <= 1000) {
+//            total += sum;
+//            ++sum;
+//
+//        }
+//        System.out.println(total);
+
+
+
+
+        System.out.println("end of program, thanks for playing!");
     }
+
+
 
 }
